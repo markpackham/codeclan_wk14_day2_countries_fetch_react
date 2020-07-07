@@ -6,7 +6,8 @@ return <option value={country.alpha3Code} key={country.alpha3Code}>{country.name
 });
 
 function handleChange(event){
-    console.log(event.target.value);
+    //console.log(event.target.value);
+    props.onCountrySelected(event.target.value);
 }
 
   return (
