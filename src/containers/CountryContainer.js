@@ -24,6 +24,11 @@ handleCountrySelected(alpha3Code){
 }
 
   render(){
+
+const selectedCountry = this.state.countries.find(country => {
+    return country.alpha3Code === this.state.selectedCountryAlpha3Code;
+})
+
     return (
       <div>
         <h2>Country Container</h2>
@@ -31,7 +36,9 @@ handleCountrySelected(alpha3Code){
         countries={this.state.countries}
         onCountrySelected = {this.handleCountrySelected}
         />
-        <CountryDetail />
+        <CountryDetail 
+        selectedCountry={selectedCountry}
+        />
       </div>
     );
   }

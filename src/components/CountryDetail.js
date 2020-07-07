@@ -1,9 +1,14 @@
 import React from 'react';
-const CountryDetail = () => {
+const CountryDetail = ({selectedCountry}) => {
+
+    // for when a country hans't been selected
+    if(!selectedCountry) return null;
+
   return (
     <h3>
-      Country details to go here.
+      {selectedCountry.name}
     </h3>
   )
+
 }
 export default CountryDetail;
