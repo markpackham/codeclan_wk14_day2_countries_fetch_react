@@ -5,9 +5,18 @@ const CountryDetail = ({selectedCountry}) => {
     if(!selectedCountry) return null;
 
   return (
-    <h3>
+      // <> is like using fragments
+      <>
+    <h2>
       {selectedCountry.name}
+    </h2>
+    <h3>
+        Region: {selectedCountry.region}
     </h3>
+    <h4>
+        Population: {selectedCountry.population}
+    </h4>
+    </>
   )
 
 }
